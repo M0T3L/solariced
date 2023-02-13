@@ -1,0 +1,64 @@
+general {
+    output_format = "i3bar"
+    separator = "|"
+    interval = 5
+    colors = true
+    color_good = "#859900"
+    color_degraded = "#B58900"
+    color_bad = "#dc322f"
+}
+
+order += "cpu_usage 0"
+order += "memory"
+order += "disk /"
+order += "disk /home"
+order += "time"
+
+time {
+    format = "%a %-I:%M %p"
+}
+
+battery 1 {
+    format = "%status %percentage"
+    format_down = " "
+    status_chr = ""
+    status_unk = "X"
+    status_bat = ""
+    status_full = ""
+    last_full_capacity = true
+    low_threshold = 20
+    integer_battery_capacity = true
+}
+
+wireless _first_ {
+    format_up = " %essid"
+    format_down = ""
+}
+
+volume master {
+    format = " %volume"
+    format_muted = " muted"
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
+}
+
+cpu_usage {
+    format = " %usage "
+}
+
+disk "/" {
+#format = "%free (or: %percentage_used used, %percentage_used_of_avail used of avail, %percentage_free free, %percentage_avail avail)"
+format = " %free"
+}
+
+disk "/home" {
+#format = "%free (or: %percentage_used used, %percentage_used_of_avail used of avail, %percentage_free free, %percentage_avail avail)"
+format = " %free"
+}
+
+memory {
+        format = " %used"
+        threshold_degraded = "25%"
+        format_degraded = " %free"
+}
