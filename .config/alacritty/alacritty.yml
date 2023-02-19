@@ -22,6 +22,17 @@ colors:
     white:   '0xfdf6e3'
 font:
   normal:
-    family: SFMono Nerd Font Mono
+    family: Blex Mono Nerd Font Mono
     style: Regular
+  bold:
+    family: Blex Mono Nerd Font Mono
+    style: Bold
+  italic:
+    family: Blex Mono Nerd Font Mono
+    style: Italic
+  bold_italic:
+    family: Blex Mono Nerd Font Mono
+    style: Bold Italic
   size: 8
+mouse:
+  hide_when_typing: true
